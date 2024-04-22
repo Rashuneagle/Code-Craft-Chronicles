@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinema Tracker</title>
+    <title>Code Craft Chronicles Blog</title>
     <!-- Google Font link -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
     <!-- Bootstrap library -->
@@ -15,28 +15,34 @@
   </head>
 
 <body>
-    <nav class="container-fluid flex-column align-items-start">
-      <div class="py-2">
-      <ul>
-      {{#if logged_in}}
-      <li><a href="/"><h3>Home</h3></a></li>
-      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
-      <li style="float:right"><a href="#" id="logout"><h3>Logout</h3></a></li>
-      {{else}}
-      <li><a href="/"><h3>Home</h3></a></li>
-      <li><a href="/dashboard"><h3>Dashboard</h3></a></li>
-      <li style="float:right"><a href="/login" id="login"><h3>Login</h3></a></li>
-      {{/if}}
+  <header>
+    <h1>
+      Code Craft Chronicles Blog
+    </h1>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{#if logged_in}}
+        <li class="nav-item"><a class="nav-link" href="/"><h3>Home</h3></a></li>
+        <li class="nav-item"><a class="nav-link" href="/dashboard"><h3>Dashboard</h3></a></li>
+        <li class="nav-item"><a class="nav-link" href="#" id="logout"><h3>Logout</h3></a></li>
+        {{else}}
+        <li class="nav-item"><a class="nav-link" href="/"><h3>Home</h3></a></li>
+        <li class="nav-item"><a class="nav-link" href="/dashboard"><h3>Dashboard</h3></a></li>
+        <li class="nav-item"><a class="nav-link" href="/login" id="login"><h3>Login</h3></a></li>
+        {{/if}}
       </ul>
-      </div>
-      </nav>
-    <main>
-      <h1></h1>
-      {{{body}}}
-    </main>
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
-  </body>
+    </div>
+  </nav>
+  <main>
+    <h1></h1>
+    {{{body}}}
+  </main>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
 
 </html>
