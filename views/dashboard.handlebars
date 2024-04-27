@@ -1,0 +1,24 @@
+<div id="userBlog">
+  <section class="card">
+    <div class="card-body">
+      <h3 class="card-title">My Blog Posts</h3>
+      <table>
+        <tr>
+          {{#each posts as |post|}}
+          <td>
+            <a href="/post/{{post.id}}" class="card-body">
+              <h4>{{post.title}}</h4>
+              <p>{{post.content}}</p>
+            </a>
+          </td>
+          {{/each}}
+        </tr>
+      </table>
+    </div>
+  </section>
+  <br/>
+  <div class="btn-container">
+    <a href="./newPost"><button class="btn btn-dark">+ Add Post</button></a>
+  </div>
+</div>
+<script src="/js/dashboard.js"></script>
