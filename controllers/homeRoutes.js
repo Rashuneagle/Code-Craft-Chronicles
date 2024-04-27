@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Movie, User } = require('../models');
+const { Posts, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -22,6 +22,17 @@ router.get('/login', (req, res) => {
 //create login.handlebars file  
 // res.render('login');
   res.render('homepage');
+});
+
+router.get('/dashboard',  async (req, res) => {
+  try {
+
+
+    res.render('dashboard', {
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
