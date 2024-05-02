@@ -6,7 +6,7 @@
         <tr>
           {{#each posts as |post|}}
           <td>
-            <a href="/post/{{post.id}}" class="card-body">
+            <a href="/posts/{{post.id}}" class="card-body">
               <h4>{{post.title}}</h4>
               <p>{{post.content}}</p>
             </a>
@@ -18,7 +18,7 @@
   </section>
   <br/>
   <div class="btn-container">
-    <a href="./newPost"><button class="btn btn-dark">+ Add Post</button></a>
+    <a href="./newPosts"><button class="btn btn-dark">+ Add Post</button></a>
   </div>
 </div>
 <script src="/js/dashboard.js"></script>
